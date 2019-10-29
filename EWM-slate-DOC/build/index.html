@@ -1,0 +1,2297 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+          </li>
+          <li>
+            <a href="#login" class="toc-h1 toc-link" data-title="Login">Login</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#check-email" class="toc-h2 toc-link" data-title="Check Email">Check Email</a>
+                  </li>
+                  <li>
+                    <a href="#login-2" class="toc-h2 toc-link" data-title="login">login</a>
+                  </li>
+                  <li>
+                    <a href="#get-two-step-verify-config" class="toc-h2 toc-link" data-title="Get two step verify config">Get two step verify config</a>
+                  </li>
+                  <li>
+                    <a href="#verify-two-step-verification-code" class="toc-h2 toc-link" data-title="Verify two step verification code">Verify two step verification code</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#card-transaction" class="toc-h1 toc-link" data-title="Card Transaction">Card Transaction</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-card-transactions" class="toc-h2 toc-link" data-title="Get All Card Transactions">Get All Card Transactions</a>
+                  </li>
+                  <li>
+                    <a href="#get-all-issuance-and-loading-fee" class="toc-h2 toc-link" data-title="Get All Issuance and Loading Fee">Get All Issuance and Loading Fee</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#manage-funding-accounts" class="toc-h1 toc-link" data-title="Manage funding accounts">Manage funding accounts</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#search-tenants-funding-account-details" class="toc-h2 toc-link" data-title="Search Tenants ( funding account details )">Search Tenants ( funding account details )</a>
+                  </li>
+                  <li>
+                    <a href="#get-tenants-funding-account-details" class="toc-h2 toc-link" data-title="Get Tenants (funding account details)">Get Tenants (funding account details)</a>
+                  </li>
+                  <li>
+                    <a href="#search-prefunding-transactions" class="toc-h2 toc-link" data-title="Search PreFunding Transactions">Search PreFunding Transactions</a>
+                  </li>
+                  <li>
+                    <a href="#export-prefunding-transactions" class="toc-h2 toc-link" data-title="Export PreFunding Transactions">Export PreFunding Transactions</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#manage-cardholders" class="toc-h1 toc-link" data-title="Manage cardholders">Manage cardholders</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#multi-balances" class="toc-h2 toc-link" data-title="Multi Balances">Multi Balances</a>
+                  </li>
+                  <li>
+                    <a href="#card-info2" class="toc-h2 toc-link" data-title="Card-info2">Card-info2</a>
+                  </li>
+                  <li>
+                    <a href="#card-status" class="toc-h2 toc-link" data-title="Card Status">Card Status</a>
+                  </li>
+                  <li>
+                    <a href="#get-card-details" class="toc-h2 toc-link" data-title="Get Card Details">Get Card Details</a>
+                  </li>
+                  <li>
+                    <a href="#get-balance-of-a-card" class="toc-h2 toc-link" data-title="Get Balance of a Card">Get Balance of a Card</a>
+                  </li>
+                  <li>
+                    <a href="#credit-fund-to-a-card-account" class="toc-h2 toc-link" data-title="Credit fund to a card account">Credit fund to a card account</a>
+                  </li>
+                  <li>
+                    <a href="#get-card-latest-transaction-history" class="toc-h2 toc-link" data-title="Get card latest transaction history">Get card latest transaction history</a>
+                  </li>
+                  <li>
+                    <a href="#change-card-status-v2" class="toc-h2 toc-link" data-title="Change card status V2">Change card status V2</a>
+                  </li>
+                  <li>
+                    <a href="#change-card-status-v2-2" class="toc-h2 toc-link" data-title="Change card status V2">Change card status V2</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to the EWM API</p>
+
+<p><code>Sandbox Base URL : https://demo-api.worldcurrency.cards</code></p>
+
+<p><code>Production Base URL : https://api.worldcurrency.cards</code></p>
+<h1 id='authentication'>Authentication</h1>
+<blockquote>
+<p>To authorize, use this code:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"api_endpoint_here"</span>
+  -H <span class="s2">"Authorization: bearer jwttoken"</span>
+</code></pre>
+<blockquote>
+<p>Make sure to replace <code>jwttoken</code> with your API key.</p>
+</blockquote>
+
+<p>EWM expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+
+<p><code>Authorization: bearer jwttoken</code></p>
+
+<aside class="notice">
+You must replace <code>jwttoken</code> with your personal API key.
+</aside>
+<h1 id='login'>Login</h1><h2 id='check-email'>Check Email</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"BaseUrl + /api/v1/users/checkIfEmailExists/sherin@accubits.com"</span>
+  -H <span class="s2">"Authorization: bearer jwttoken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">ewm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'ewm'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">ewm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'jwttoken'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">ewm</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">ewm</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+</code></pre>
+<blockquote>
+<p>The above command returns below response</p>
+</blockquote>
+<pre class="highlight plaintext"><code>true
+</code></pre>
+<p>This endpoint checks if an user email exist in EWM .</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST BaseUrl + /api/v1/users/checkIfEmailExists/&lt;EMAIL&gt;</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>EMAIL</td>
+<td>user email</td>
+</tr>
+</tbody></table>
+<h2 id='login-2'>login</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"BaseUrl + /api/v1/login"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns below response</p>
+</blockquote>
+<pre class="highlight plaintext"><code>{
+  "id": "fc09eec6-6e50-4a52-9dc9-9c1940cccd59",
+  "email": "sherin@accubits.com",
+  "password": null,
+  "firstName": "Sherin",
+  "middleName": null,
+  "lastName": "Chacko",
+  "mobileNumber": null,
+  "telephone": null,
+  "gender": null,
+  "creationTime": null,
+  "lastUpdationTime": null,
+  "status": "ACTIVE",
+  "cardholderStatus": null,
+  "birthDate": null,
+  "placeOfBirth": null,
+  "preferredLanguage": "en",
+  "securityQuestionsAnswers": null,
+  "termAndConditionVersion": null,
+  "jobTitle": null,
+  "requestedCardCurrency": null,
+  "role": {
+    "id": "ROLE_MASTER_PM",
+    "name": "Master Program Manager",
+    "grantedOperations": null
+  },
+  "authorities": "OP_CREATE_MASTER_PM,OP_VIEW_PM",
+  "loginAttempt": 0,
+  "tenant": {
+    "id": "c10ae291-4edf-4174-bc59-2fa7c0c4b787",
+    "name": "Master (EWM)",
+    "key": "ewm",
+    "status": "ACTIVE"
+  },
+  "partner": null,
+  "avatar": null,
+  "avatarFileName": null,
+  "token": "sadasdasdasd",
+  "personalSecurityMessage": null,
+  "address": {},
+  "proofAddress": null,
+  "proofAddressFile": null,
+  "identityDocument": {},
+  "managedTenants": null,
+  "nationality": null,
+  "cards": [],
+  "atmWithdrawalsYearlyEstimation": null,
+  "employeeOrAffiliaate": null,
+  "termAndConditions": null,
+  "pet": false,
+  "usTax": false
+}
+</code></pre>
+<p>login to worldcurrency.cards</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST BaseUrl + /api/v1/login</code></p>
+<h3 id='post-parameters'>POST Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>loginId</td>
+<td>user email</td>
+</tr>
+<tr>
+<td>password</td>
+<td>password</td>
+</tr>
+</tbody></table>
+<h2 id='get-two-step-verify-config'>Get two step verify config</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"BaseUrl + /api/v1/users/{userId}/two-steps-verify-config/"</span>
+  -H <span class="s2">"Authorization: bearer jwttoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns below response</p>
+</blockquote>
+<pre class="highlight plaintext"><code>{
+  "userId": "fc09eec6-6e50-4a52-9dc9-9c1940cccd59",
+  "twoStepAuthConfiguration": null
+}
+</code></pre>
+<p>get two step verification config</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET BaseUrl + /api/v1/users/&lt;userId&gt;/two-steps-verify-config/</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userId</td>
+<td>user id</td>
+</tr>
+</tbody></table>
+<h2 id='verify-two-step-verification-code'>Verify two step verification code</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"BaseUrl + /api/v1/verify/"</span>
+  -H <span class="s2">"Authorization: bearer jwttoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns http 200 with no response body on success</p>
+</blockquote>
+<pre class="highlight plaintext"><code>
+</code></pre>
+<p>verification of two step verification code</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>POST BaseUrl + /api/v1/verify/</code></p>
+<h3 id='post-parameters-2'>POST Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>code</td>
+<td>code received on email</td>
+</tr>
+</tbody></table>
+<h1 id='card-transaction'>Card Transaction</h1><h2 id='get-all-card-transactions'>Get All Card Transactions</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"BaseUrl + /api/v1/cards/dfdbeaff-b823-4885-aa49-5c5ae9300d46/transaction-list?currency=USD&amp;from=20190323&amp;to=20190423"</span>
+  -H <span class="s2">"Authorization: bearer jwttoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"tranxId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100114690526"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"tranxDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"28-MAR-2019"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"tranxTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"13:32:44"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cardNumberAccNum"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"origin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VISA"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"transactionCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TPTP207"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"transactionType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VISA cash disbursement"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"terminalId"</span><span class="p">:</span><span class="w"> </span><span class="s2">":rWL3SBD"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"merchantId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AV. ABILIO M"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"merchantName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AV. ABILIO M"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"merchantCity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"B. HORIZONTE"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"merchantCountry"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BR"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"merchantCountryCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6011"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"trace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2469"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"refNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"908706002469"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"arn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"74920529088005088028406"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"transactionAmnt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2500"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"transactionCurrency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sttlAmnt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"655.31"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sttlCurrency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"billAmnt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"655.31"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"bilCurrency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"tranxInd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DR"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cnt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"postedAmnt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"655.31"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"feeAmnt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9.83"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"oifStllCur"</span><span class="p">:</span><span class="w"> </span><span class="s2">"25.2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"oifBillCur"</span><span class="p">:</span><span class="w"> </span><span class="s2">"25.2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"contractType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"settlement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Y"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"tranxId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100114690539"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"tranxDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"28-MAR-2019"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"tranxTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"13:34:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cardNumberAccNum"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"origin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VISA"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"transactionCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TPTP207"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"transactionType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VISA cash disbursement"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"terminalId"</span><span class="p">:</span><span class="w"> </span><span class="s2">":rWL3SBD"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"merchantId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AV. ABILIO M"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"merchantName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AV. ABILIO M"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"merchantCity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"B. HORIZONTE"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"merchantCountry"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BR"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"merchantCountryCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6011"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"trace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2471"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"refNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"908706002471"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"arn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"74920529088005088028414"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"transactionAmnt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2500"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"transactionCurrency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sttlAmnt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"655.31"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sttlCurrency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"billAmnt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"655.31"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"bilCurrency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"tranxInd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DR"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cnt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"postedAmnt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"655.31"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"feeAmnt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9.83"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"oifStllCur"</span><span class="p">:</span><span class="w"> </span><span class="s2">"25.2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"oifBillCur"</span><span class="p">:</span><span class="w"> </span><span class="s2">"25.2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"contractType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"settlement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Y"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all Card transactions.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET BaseUrl + /api/v1/cards/dfdbeaff-b823-4885-aa49-5c5ae9300d46/transaction-list?currency=USD&amp;from=20190323&amp;to=20190423</code></p>
+<h3 id='query-parameters-3'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>currency</td>
+<td>currency types like USD</td>
+</tr>
+<tr>
+<td>from</td>
+<td>from date</td>
+</tr>
+<tr>
+<td>to</td>
+<td>to date</td>
+</tr>
+</tbody></table>
+<h2 id='get-all-issuance-and-loading-fee'>Get All Issuance and Loading Fee</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"BaseUrl + /api/v1/card-transactions/search"</span>
+  -H <span class="s2">"Authorization: bearer jwttoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"76be2853-ea03-4aa5-b74c-ccc932b1c731"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"transactionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3db05044-9442-4276-b395-adc6b6256e5e"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"transactionDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-04-08T15:06:39.886Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"origin"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"feeType"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"transactionType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Loading Fee"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"terminalId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"merchantId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"merchantName"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"trace"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"refNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FURERUVYVKQMR"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"arn"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"transactionAmount"</span><span class="p">:</span><span class="w"> </span><span class="mf">537.2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"transactionCurrency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"settlementAmount"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"settlementCurrency"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"billAmount"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"billCurrency"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"tranxFee"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"tranxInd"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"oifSttlCur"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"oifBillCur"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"transactionCode"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"availableBalance"</span><span class="p">:</span><span class="w"> </span><span class="mf">37210.96</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fee - Load Card Through Web Service / Website"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"sourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INTERNAL"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"merchantCity"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"merchantCountry"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"mcc"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"contractType"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ec6a4f2b-a778-4bb5-923b-471f01221e2b"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"transactionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d02da6c2-8aac-41ac-8754-867e220eeee6"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"transactionDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-28T14:36:21Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"origin"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"feeType"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"transactionType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Loading Fee"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"terminalId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"merchantId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"merchantName"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"trace"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"refNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IWK6TPLZZNSLG"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"arn"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"transactionAmount"</span><span class="p">:</span><span class="w"> </span><span class="mf">731.71</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"transactionCurrency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"settlementAmount"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"settlementCurrency"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"billAmount"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"billCurrency"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"tranxFee"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"tranxInd"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"oifSttlCur"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"oifBillCur"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"transactionCode"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"availableBalance"</span><span class="p">:</span><span class="w"> </span><span class="mf">32390.61</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fee - Load Card Through Web Service / Website"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"sourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INTERNAL"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"merchantCity"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"merchantCountry"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"mcc"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"contractType"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"offset"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"limit"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all Card issuance and loading fee.</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>POST BaseUrl + /api/v1/card-transactions/search</code></p>
+<h3 id='query-parameters-4'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>cardIds</td>
+<td>card ids [&quot;dfdbeaff-b823-4885-aa49-5c5ae9300d46&quot;]</td>
+</tr>
+<tr>
+<td>currencies</td>
+<td>[&quot;USD&quot;]</td>
+</tr>
+<tr>
+<td>fromDate</td>
+<td>&quot;2019-03-23 00:00:00&quot;</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>0</td>
+</tr>
+<tr>
+<td>sourceTypes</td>
+<td>[&quot;INTERNAL&quot;]</td>
+</tr>
+<tr>
+<td>toDate</td>
+<td>&quot;2019-04-23 23:59:59&quot;</td>
+</tr>
+<tr>
+<td>transactionTypes</td>
+<td>[&quot;Loading Fee&quot;, &quot;Activation Fee&quot;]</td>
+</tr>
+</tbody></table>
+<h1 id='manage-funding-accounts'>Manage funding accounts</h1><h2 id='search-tenants-funding-account-details'>Search Tenants ( funding account details )</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"BaseUrl + /api/v1/tenants/"</span>
+  -H <span class="s2">"Authorization: bearer jwttoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns below response</p>
+</blockquote>
+<pre class="highlight plaintext"><code>{
+  "content": [
+    {
+      "id": "string",
+      "name": "string",
+      "status": "string",
+      "companyKey": "string",
+      "domainName": "string",
+      "themeCss": "string",
+      "logoUrl": "string",
+      "companyLegalName": "string",
+      "companyTradingName": "string",
+      "kyb": "string",
+      "preferredLanguage": "string",
+      "passwordRegex": "string",
+      "businessAddressLine1": "string",
+      "businessAddressLine2": "string",
+      "businessZipcode": "string",
+      "businessCity": "string",
+      "businessCountry": "string",
+      "phoneNumber": "string",
+      "description": "string",
+      "verificationProcess": "string",
+      "cardProgramTypes": [
+        "string"
+      ],
+      "photoOfInCorporateCerfUrl": "string",
+      "photoOfGoodStandingCerfUrl": "string",
+      "shippingAddresses": [
+        {
+          "addressLine1": "string",
+          "addressLine2": "string",
+          "city": "string",
+          "country": "string",
+          "emailAddress": "string",
+          "firstName": "string",
+          "id": "string",
+          "isDefault": true,
+          "lastName": "string",
+          "nickName": "string",
+          "phoneNumber": "string",
+          "state": "string",
+          "zipCode": "string"
+        }
+      ],
+      "logo": {
+        "fileName": "string",
+        "removed": true,
+        "data": "string",
+        "url": "string",
+        "isRemoved": true
+      },
+      "photoOfInCorporateCerf": {
+        "fileName": "string",
+        "removed": true,
+        "data": "string",
+        "url": "string",
+        "isRemoved": true
+      },
+      "photoOfGoodStandingCerf": {
+        "fileName": "string",
+        "removed": true,
+        "data": "string",
+        "url": "string",
+        "isRemoved": true
+      },
+      "documents": [
+        {
+          "fileName": "string",
+          "removed": true,
+          "data": "string",
+          "url": "string",
+          "isRemoved": true
+        }
+      ],
+      "prefundingAccounts": [
+        {
+          "tenantId": "string",
+          "currency": "string",
+          "balance": 0,
+          "reference": "string"
+        }
+      ],
+      "activePrefundingAccounts": [
+        "string"
+      ],
+      "cardPrograms": [
+        {
+          "commission": 0,
+          "commissionType": "PROFIT_SHARE",
+          "creationTime": "2019-04-24T06:22:55.002Z",
+          "currency": "string",
+          "deleted": true,
+          "externalCardProgramCurrencies": "string",
+          "externalCardProgramId": "string",
+          "id": "string",
+          "lastUpdatedTime": "2019-04-24T06:22:55.002Z",
+          "name": "string",
+          "tenantId": "string",
+          "tenantName": "string",
+          "termAndCondition": {
+            "description": "string",
+            "id": "string",
+            "name": "string",
+            "url": "string"
+          }
+        }
+      ],
+      "numberOfActiveCardholders": 0,
+      "numberOfPendingCardholders": 0,
+      "contacts": [
+        {
+          "birthDate": "2019-04-24",
+          "emailAddress": "string",
+          "firstName": "string",
+          "gender": "MALE",
+          "jobTitle": "string",
+          "lastName": "string",
+          "mobileNumber": "string",
+          "number": 0,
+          "pet": true,
+          "telephone": "string",
+          "usTax": true,
+          "isPet": true,
+          "isUsTax": true
+        }
+      ],
+      "groupInfo": {
+        "subsidiary": true,
+        "parentCompanyName": "string",
+        "address": "string"
+      },
+      "ubos": [
+        {
+          "firstName": "string",
+          "pet": true,
+          "usTax": true,
+          "lastName": "string",
+          "address": "string",
+          "share": 0,
+          "isPet": true,
+          "isUsTax": true
+        }
+      ],
+      "parentUbos": [
+        {
+          "firstName": "string",
+          "pet": true,
+          "usTax": true,
+          "lastName": "string",
+          "address": "string",
+          "share": 0,
+          "isPet": true,
+          "isUsTax": true
+        }
+      ],
+      "estimationVolume": {
+        "currency": "string",
+        "averageLoadingPerCard": 0,
+        "expectedNumberOfCards": 0,
+        "expectedNumberOfLoadingPerMonth": "string",
+        "loadingFrequency": "string",
+        "cardHolderResidences": [
+          {
+            "country": "string",
+            "rate": 0
+          }
+        ]
+      },
+      "bankAccounts": [
+        {
+          "aba": "string",
+          "accountName": "string",
+          "accountNumber": "string",
+          "achRoutingNumber": "string",
+          "address": {
+            "addressLine1": "string",
+            "addressLine2": "string",
+            "city": "string",
+            "country": "string",
+            "state": "string",
+            "zipCode": "string"
+          },
+          "bankAddress": "string",
+          "bankName": "string",
+          "beneficiaryName": "string",
+          "creationTime": 0,
+          "currency": "string",
+          "ibanNumber": "string",
+          "id": "string",
+          "lastUpdatedTime": 0,
+          "sortCode": "string",
+          "swiftCode": "string",
+          "tenantId": "string"
+        }
+      ],
+      "cardAllocations": [
+        {
+          "cardId": "string",
+          "partialCardNumber": "string",
+          "externalCardProgram": "string",
+          "additionalCardInfo": {
+            "date": "string",
+            "sendingMethod": "string",
+            "trackNumber": "string"
+          }
+        }
+      ]
+    }
+  ],
+  "pageIndex": 0,
+  "totalElements": 0,
+  "totalPages": 0
+}
+</code></pre>
+<p>seacrch funding account details</p>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>GET BaseUrl + /api/v1/tenants/</code></p>
+<h3 id='query-parameters-5'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>statuses</td>
+<td>ACTIVE / INACTIVE</td>
+</tr>
+<tr>
+<td>roles</td>
+<td>Provide multiple values in new lines.</td>
+</tr>
+<tr>
+<td>userPartners</td>
+<td>Provide multiple values in new lines</td>
+</tr>
+<tr>
+<td>keyword</td>
+<td>search tearm</td>
+</tr>
+<tr>
+<td>pageIndex</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>pageSize</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>assignedCorporate</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>isCardholderHoldingCard</td>
+<td>boolean</td>
+</tr>
+</tbody></table>
+<h2 id='get-tenants-funding-account-details'>Get Tenants (funding account details)</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"BaseUrl + /api/v1/tenants/{tenantId}"</span>
+  -H <span class="s2">"Authorization: bearer jwttoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns below response</p>
+</blockquote>
+<pre class="highlight plaintext"><code>{
+  "id": "string",
+  "name": "string",
+  "status": "string",
+  "companyKey": "string",
+  "domainName": "string",
+  "themeCss": "string",
+  "logoUrl": "string",
+  "companyLegalName": "string",
+  "companyTradingName": "string",
+  "kyb": "string",
+  "preferredLanguage": "string",
+  "passwordRegex": "string",
+  "businessAddressLine1": "string",
+  "businessAddressLine2": "string",
+  "businessZipcode": "string",
+  "businessCity": "string",
+  "businessCountry": "string",
+  "phoneNumber": "string",
+  "description": "string",
+  "verificationProcess": "string",
+  "cardProgramTypes": [
+    "string"
+  ],
+  "photoOfInCorporateCerfUrl": "string",
+  "photoOfGoodStandingCerfUrl": "string",
+  "shippingAddresses": [
+    {
+      "addressLine1": "string",
+      "addressLine2": "string",
+      "city": "string",
+      "country": "string",
+      "emailAddress": "string",
+      "firstName": "string",
+      "id": "string",
+      "isDefault": true,
+      "lastName": "string",
+      "nickName": "string",
+      "phoneNumber": "string",
+      "state": "string",
+      "zipCode": "string"
+    }
+  ],
+  "logo": {
+    "fileName": "string",
+    "removed": true,
+    "data": "string",
+    "url": "string",
+    "isRemoved": true
+  },
+  "photoOfInCorporateCerf": {
+    "fileName": "string",
+    "removed": true,
+    "data": "string",
+    "url": "string",
+    "isRemoved": true
+  },
+  "photoOfGoodStandingCerf": {
+    "fileName": "string",
+    "removed": true,
+    "data": "string",
+    "url": "string",
+    "isRemoved": true
+  },
+  "documents": [
+    {
+      "fileName": "string",
+      "removed": true,
+      "data": "string",
+      "url": "string",
+      "isRemoved": true
+    }
+  ],
+  "prefundingAccounts": [
+    {
+      "tenantId": "string",
+      "currency": "string",
+      "balance": 0,
+      "reference": "string"
+    }
+  ],
+  "activePrefundingAccounts": [
+    "string"
+  ],
+  "cardPrograms": [
+    {
+      "commission": 0,
+      "commissionType": "PROFIT_SHARE",
+      "creationTime": "2019-04-24T06:22:55.072Z",
+      "currency": "string",
+      "deleted": true,
+      "externalCardProgramCurrencies": "string",
+      "externalCardProgramId": "string",
+      "id": "string",
+      "lastUpdatedTime": "2019-04-24T06:22:55.072Z",
+      "name": "string",
+      "tenantId": "string",
+      "tenantName": "string",
+      "termAndCondition": {
+        "description": "string",
+        "id": "string",
+        "name": "string",
+        "url": "string"
+      }
+    }
+  ],
+  "numberOfActiveCardholders": 0,
+  "numberOfPendingCardholders": 0,
+  "contacts": [
+    {
+      "birthDate": "2019-04-24",
+      "emailAddress": "string",
+      "firstName": "string",
+      "gender": "MALE",
+      "jobTitle": "string",
+      "lastName": "string",
+      "mobileNumber": "string",
+      "number": 0,
+      "pet": true,
+      "telephone": "string",
+      "usTax": true,
+      "isPet": true,
+      "isUsTax": true
+    }
+  ],
+  "groupInfo": {
+    "subsidiary": true,
+    "parentCompanyName": "string",
+    "address": "string"
+  },
+  "ubos": [
+    {
+      "firstName": "string",
+      "pet": true,
+      "usTax": true,
+      "lastName": "string",
+      "address": "string",
+      "share": 0,
+      "isPet": true,
+      "isUsTax": true
+    }
+  ],
+  "parentUbos": [
+    {
+      "firstName": "string",
+      "pet": true,
+      "usTax": true,
+      "lastName": "string",
+      "address": "string",
+      "share": 0,
+      "isPet": true,
+      "isUsTax": true
+    }
+  ],
+  "estimationVolume": {
+    "currency": "string",
+    "averageLoadingPerCard": 0,
+    "expectedNumberOfCards": 0,
+    "expectedNumberOfLoadingPerMonth": "string",
+    "loadingFrequency": "string",
+    "cardHolderResidences": [
+      {
+        "country": "string",
+        "rate": 0
+      }
+    ]
+  },
+  "bankAccounts": [
+    {
+      "aba": "string",
+      "accountName": "string",
+      "accountNumber": "string",
+      "achRoutingNumber": "string",
+      "address": {
+        "addressLine1": "string",
+        "addressLine2": "string",
+        "city": "string",
+        "country": "string",
+        "state": "string",
+        "zipCode": "string"
+      },
+      "bankAddress": "string",
+      "bankName": "string",
+      "beneficiaryName": "string",
+      "creationTime": 0,
+      "currency": "string",
+      "ibanNumber": "string",
+      "id": "string",
+      "lastUpdatedTime": 0,
+      "sortCode": "string",
+      "swiftCode": "string",
+      "tenantId": "string"
+    }
+  ],
+  "cardAllocations": [
+    {
+      "cardId": "string",
+      "partialCardNumber": "string",
+      "externalCardProgram": "string",
+      "additionalCardInfo": {
+        "date": "string",
+        "sendingMethod": "string",
+        "trackNumber": "string"
+      }
+    }
+  ]
+}
+
+
+</code></pre>
+<p>get details of a funding account</p>
+<h3 id='http-request-8'>HTTP Request</h3>
+<p><code>GET BaseUrl + /api/v1/tenants/&lt;tenantId&gt;</code></p>
+<h3 id='query-parameters-6'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>tenantId</td>
+<td>tenant id</td>
+</tr>
+</tbody></table>
+<h2 id='search-prefunding-transactions'>Search PreFunding Transactions</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"BaseUrl + /api/v1/pre-funding-transactions/search"</span>
+  -H <span class="s2">"Authorization: bearer jwttoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns </p>
+</blockquote>
+<pre class="highlight plaintext"><code>{
+  "limit": 0,
+  "offset": 0,
+  "results": [
+    {}
+  ],
+  "total": 0
+}
+</code></pre>
+<p>search pre funding account transactions</p>
+<h3 id='http-request-9'>HTTP Request</h3>
+<p><code>POST BaseUrl + /api/v1/pre-funding-transactions/search</code></p>
+<h3 id='query-parameters-7'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>transactionSearchParams</td>
+<td>input body check below JSON</td>
+</tr>
+</tbody></table>
+
+<p><code>JSON
+{
+  &quot;source&quot;: {},
+  &quot;tenantIds&quot;: {},
+  &quot;target&quot;: {},
+  &quot;description&quot;: {},
+  &quot;transTypes&quot;: {},
+  &quot;transStatuses&quot;: {},
+  &quot;fromDate&quot;: {},
+  &quot;toDate&quot;: {},
+  &quot;tenantId&quot;: {},
+  &quot;userId&quot;: {},
+  &quot;offset&quot;: {},
+  &quot;limit&quot;: {},
+  &quot;currencyCode&quot;: {}
+}
+</code></p>
+<h2 id='export-prefunding-transactions'>Export PreFunding Transactions</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"BaseUrl + /api/v1/pre-funding-transactions/search/export/{fileExtension}"</span>
+  -H <span class="s2">"Authorization: bearer jwttoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns </p>
+</blockquote>
+<pre class="highlight plaintext"><code></code></pre>
+<p>Export pre funding account transaction details as pdf,excel,csv,web</p>
+<h3 id='http-request-10'>HTTP Request</h3>
+<p><code>POST BaseUrl + /api/v1/pre-funding-transactions/search/export/&lt;fileExtension&gt;</code></p>
+<h3 id='query-parameters-8'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>fileExtension</td>
+<td>file extension pdf or excel or csv or web</td>
+</tr>
+<tr>
+<td>transactionSearchParams</td>
+<td>input body check below JSON</td>
+</tr>
+</tbody></table>
+
+<p><code>JSON
+{
+  &quot;source&quot;: {},
+  &quot;tenantIds&quot;: {},
+  &quot;target&quot;: {},
+  &quot;description&quot;: {},
+  &quot;transTypes&quot;: {},
+  &quot;transStatuses&quot;: {},
+  &quot;fromDate&quot;: {},
+  &quot;toDate&quot;: {},
+  &quot;tenantId&quot;: {},
+  &quot;userId&quot;: {},
+  &quot;offset&quot;: {},
+  &quot;limit&quot;: {},
+  &quot;currencyCode&quot;: {}
+}
+</code></p>
+<h1 id='manage-cardholders'>Manage cardholders</h1><h2 id='multi-balances'>Multi Balances</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"BaseUrl + /api/v1/cards/{cardId}/multi-balances"</span>
+  -H <span class="s2">"Authorization: bearer jwttoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns </p>
+</blockquote>
+<pre class="highlight plaintext"><code>{
+  "additionalCardInfo": {
+    "date": "string",
+    "sendingMethod": "string",
+    "trackNumber": "string"
+  },
+  "allocatedToTenant": {
+    "id": "string",
+    "name": "string"
+  },
+  "amountLimit": 0,
+  "assignedToCardHolder": true,
+  "balances": [
+    {
+      "balance": 0,
+      "currency": "string"
+    }
+  ],
+  "batchReferenceId": 0,
+  "cardEstimatedUsage": {
+    "yearlyAtmWithdrawal": "string"
+  },
+  "cardHolder": {
+    "address2": "string",
+    "address3": "string",
+    "address4": "string",
+    "address5": "string",
+    "applicationId": "string",
+    "billingAddress1": "string",
+    "billingAddress2": "string",
+    "billingAddress3": "string",
+    "billingAddress4": "string",
+    "billingAddress5": "string",
+    "billingCity": "string",
+    "billingCountry": "string",
+    "billingState": "string",
+    "billingZipOrPostalCode": "string",
+    "cellNumber": "string",
+    "cellPhoneProvider": "string",
+    "citizenCountry": "string",
+    "city": "string",
+    "country": "string",
+    "dob": "string",
+    "drivingLicense": "string",
+    "drivingLicenseNumber": "string",
+    "drivingLicenseState": "string",
+    "email": "string",
+    "employmentStatus": "string",
+    "firstName": "string",
+    "firstName2": "string",
+    "firstName3": "string",
+    "foreignCountryCode": "string",
+    "foreignID": "string",
+    "foreignIDType": "string",
+    "gender": "MALE",
+    "id": "string",
+    "langId": "string",
+    "lastName": "string",
+    "lastName2": "string",
+    "lastName3": "string",
+    "middleName": "string",
+    "middleName2": "string",
+    "middleName3": "string",
+    "motherMaidenName": "string",
+    "nameofEmployer": "string",
+    "occupation": "string",
+    "postalCode": "string",
+    "relation": "string",
+    "residentialPhone": "string",
+    "shipToFirstName": "string",
+    "shipToLastName": "string",
+    "shipToMiddleName": "string",
+    "shippingAddressOptionId": "string",
+    "ssn": "string",
+    "stateCode": "string",
+    "status": "string",
+    "workPhone": "string"
+  },
+  "cardId": "string",
+  "cardNote": "string",
+  "cardNumber": 0,
+  "cardNumberLastDigits": "string",
+  "cardProgram": {
+    "commission": 0,
+    "commissionType": "PROFIT_SHARE",
+    "creationTime": "2019-04-24T06:22:53.881Z",
+    "currency": "string",
+    "deleted": true,
+    "externalCardProgramCurrencies": "string",
+    "externalCardProgramId": "string",
+    "id": "string",
+    "lastUpdatedTime": "2019-04-24T06:22:53.881Z",
+    "name": "string",
+    "tenantId": "string",
+    "tenantName": "string",
+    "termAndCondition": {
+      "description": "string",
+      "id": "string",
+      "name": "string",
+      "url": "string"
+    }
+  },
+  "cardProgramId": "string",
+  "cardReferenceID": 0,
+  "cardShippingMethodId": 0,
+  "cardStatusCode": "VALID_CARD",
+  "creationTime": "string",
+  "customerId": "string",
+  "deposit": 0,
+  "existingCardNo": "string",
+  "existingCardReferenceID": "string",
+  "expiryDate": "string",
+  "externalCardProgramId": "string",
+  "nameOnCard": "string",
+  "partialCardNumber": "string",
+  "primaryCardNo": "string",
+  "primaryCardReferenceID": "string",
+  "referenceId": 0,
+  "shippingAddress": {
+    "addressLine1": "string",
+    "addressLine2": "string",
+    "city": "string",
+    "country": "string",
+    "emailAddress": "string",
+    "firstName": "string",
+    "id": "string",
+    "isDefault": true,
+    "lastName": "string",
+    "nickName": "string",
+    "phoneNumber": "string",
+    "state": "string",
+    "zipCode": "string"
+  },
+  "startingNumbers": "string",
+  "thirdPartyType": "I2C",
+  "withdrawAmount": 0
+}
+</code></pre>
+<p>get card balances in all currency</p>
+<h3 id='http-request-11'>HTTP Request</h3>
+<p><code>GET BaseUrl + /api/v1/cards/{cardId}/multi-balances</code></p>
+<h3 id='query-parameters-9'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>cardId</td>
+<td>card Id</td>
+</tr>
+</tbody></table>
+<h2 id='card-info2'>Card-info2</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"BaseUrl + /api/v1/cards/{cardId}/card-info2"</span>
+  -H <span class="s2">"Authorization: bearer jwttoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns </p>
+</blockquote>
+<pre class="highlight plaintext"><code>
+</code></pre>
+<p>get card info</p>
+<h3 id='http-request-12'>HTTP Request</h3>
+<p><code>GET BaseUrl + /api/v1/cards/{cardId}/card-info2</code></p>
+<h3 id='query-parameters-10'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>cardId</td>
+<td>card Id</td>
+</tr>
+</tbody></table>
+<h2 id='card-status'>Card Status</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"BaseUrl + /api/v1/cards/{cardId}/status"</span>
+  -H <span class="s2">"Authorization: bearer jwttoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns </p>
+</blockquote>
+<pre class="highlight plaintext"><code>{
+  "additionalCardInfo": {
+    "date": "string",
+    "sendingMethod": "string",
+    "trackNumber": "string"
+  },
+  "allocatedToTenant": {
+    "id": "string",
+    "name": "string"
+  },
+  "amountLimit": 0,
+  "assignedToCardHolder": true,
+  "balances": [
+    {
+      "balance": 0,
+      "currency": "string"
+    }
+  ],
+  "batchReferenceId": 0,
+  "cardEstimatedUsage": {
+    "yearlyAtmWithdrawal": "string"
+  },
+  "cardHolder": {
+    "address2": "string",
+    "address3": "string",
+    "address4": "string",
+    "address5": "string",
+    "applicationId": "string",
+    "billingAddress1": "string",
+    "billingAddress2": "string",
+    "billingAddress3": "string",
+    "billingAddress4": "string",
+    "billingAddress5": "string",
+    "billingCity": "string",
+    "billingCountry": "string",
+    "billingState": "string",
+    "billingZipOrPostalCode": "string",
+    "cellNumber": "string",
+    "cellPhoneProvider": "string",
+    "citizenCountry": "string",
+    "city": "string",
+    "country": "string",
+    "dob": "string",
+    "drivingLicense": "string",
+    "drivingLicenseNumber": "string",
+    "drivingLicenseState": "string",
+    "email": "string",
+    "employmentStatus": "string",
+    "firstName": "string",
+    "firstName2": "string",
+    "firstName3": "string",
+    "foreignCountryCode": "string",
+    "foreignID": "string",
+    "foreignIDType": "string",
+    "gender": "MALE",
+    "id": "string",
+    "langId": "string",
+    "lastName": "string",
+    "lastName2": "string",
+    "lastName3": "string",
+    "middleName": "string",
+    "middleName2": "string",
+    "middleName3": "string",
+    "motherMaidenName": "string",
+    "nameofEmployer": "string",
+    "occupation": "string",
+    "postalCode": "string",
+    "relation": "string",
+    "residentialPhone": "string",
+    "shipToFirstName": "string",
+    "shipToLastName": "string",
+    "shipToMiddleName": "string",
+    "shippingAddressOptionId": "string",
+    "ssn": "string",
+    "stateCode": "string",
+    "status": "string",
+    "workPhone": "string"
+  },
+  "cardId": "string",
+  "cardNote": "string",
+  "cardNumber": 0,
+  "cardNumberLastDigits": "string",
+  "cardProgram": {
+    "commission": 0,
+    "commissionType": "PROFIT_SHARE",
+    "creationTime": "2019-04-24T06:22:53.929Z",
+    "currency": "string",
+    "deleted": true,
+    "externalCardProgramCurrencies": "string",
+    "externalCardProgramId": "string",
+    "id": "string",
+    "lastUpdatedTime": "2019-04-24T06:22:53.929Z",
+    "name": "string",
+    "tenantId": "string",
+    "tenantName": "string",
+    "termAndCondition": {
+      "description": "string",
+      "id": "string",
+      "name": "string",
+      "url": "string"
+    }
+  },
+  "cardProgramId": "string",
+  "cardReferenceID": 0,
+  "cardShippingMethodId": 0,
+  "cardStatusCode": "VALID_CARD",
+  "creationTime": "string",
+  "customerId": "string",
+  "deposit": 0,
+  "existingCardNo": "string",
+  "existingCardReferenceID": "string",
+  "expiryDate": "string",
+  "externalCardProgramId": "string",
+  "nameOnCard": "string",
+  "partialCardNumber": "string",
+  "primaryCardNo": "string",
+  "primaryCardReferenceID": "string",
+  "referenceId": 0,
+  "shippingAddress": {
+    "addressLine1": "string",
+    "addressLine2": "string",
+    "city": "string",
+    "country": "string",
+    "emailAddress": "string",
+    "firstName": "string",
+    "id": "string",
+    "isDefault": true,
+    "lastName": "string",
+    "nickName": "string",
+    "phoneNumber": "string",
+    "state": "string",
+    "zipCode": "string"
+  },
+  "startingNumbers": "string",
+  "thirdPartyType": "I2C",
+  "withdrawAmount": 0
+}
+</code></pre>
+<p>get card status from PEX</p>
+<h3 id='http-request-13'>HTTP Request</h3>
+<p><code>GET BaseUrl + /api/v1/cards/&lt;cardId&gt;/status</code></p>
+<h3 id='query-parameters-11'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>cardId</td>
+<td>card Id</td>
+</tr>
+</tbody></table>
+<h2 id='get-card-details'>Get Card Details</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"BaseUrl + /api/v1/cards/{cardId}/status"</span>
+  -H <span class="s2">"Authorization: bearer jwttoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns </p>
+</blockquote>
+<pre class="highlight plaintext"><code>{
+  "additionalCardInfo": {
+    "date": "string",
+    "sendingMethod": "string",
+    "trackNumber": "string"
+  },
+  "allocatedToTenant": {
+    "id": "string",
+    "name": "string"
+  },
+  "amountLimit": 0,
+  "assignedToCardHolder": true,
+  "balances": [
+    {
+      "balance": 0,
+      "currency": "string"
+    }
+  ],
+  "batchReferenceId": 0,
+  "cardEstimatedUsage": {
+    "yearlyAtmWithdrawal": "string"
+  },
+  "cardHolder": {
+    "address2": "string",
+    "address3": "string",
+    "address4": "string",
+    "address5": "string",
+    "applicationId": "string",
+    "billingAddress1": "string",
+    "billingAddress2": "string",
+    "billingAddress3": "string",
+    "billingAddress4": "string",
+    "billingAddress5": "string",
+    "billingCity": "string",
+    "billingCountry": "string",
+    "billingState": "string",
+    "billingZipOrPostalCode": "string",
+    "cellNumber": "string",
+    "cellPhoneProvider": "string",
+    "citizenCountry": "string",
+    "city": "string",
+    "country": "string",
+    "dob": "string",
+    "drivingLicense": "string",
+    "drivingLicenseNumber": "string",
+    "drivingLicenseState": "string",
+    "email": "string",
+    "employmentStatus": "string",
+    "firstName": "string",
+    "firstName2": "string",
+    "firstName3": "string",
+    "foreignCountryCode": "string",
+    "foreignID": "string",
+    "foreignIDType": "string",
+    "gender": "MALE",
+    "id": "string",
+    "langId": "string",
+    "lastName": "string",
+    "lastName2": "string",
+    "lastName3": "string",
+    "middleName": "string",
+    "middleName2": "string",
+    "middleName3": "string",
+    "motherMaidenName": "string",
+    "nameofEmployer": "string",
+    "occupation": "string",
+    "postalCode": "string",
+    "relation": "string",
+    "residentialPhone": "string",
+    "shipToFirstName": "string",
+    "shipToLastName": "string",
+    "shipToMiddleName": "string",
+    "shippingAddressOptionId": "string",
+    "ssn": "string",
+    "stateCode": "string",
+    "status": "string",
+    "workPhone": "string"
+  },
+  "cardId": "string",
+  "cardNote": "string",
+  "cardNumber": 0,
+  "cardNumberLastDigits": "string",
+  "cardProgram": {
+    "commission": 0,
+    "commissionType": "PROFIT_SHARE",
+    "creationTime": "2019-04-24T06:22:53.624Z",
+    "currency": "string",
+    "deleted": true,
+    "externalCardProgramCurrencies": "string",
+    "externalCardProgramId": "string",
+    "id": "string",
+    "lastUpdatedTime": "2019-04-24T06:22:53.624Z",
+    "name": "string",
+    "tenantId": "string",
+    "tenantName": "string",
+    "termAndCondition": {
+      "description": "string",
+      "id": "string",
+      "name": "string",
+      "url": "string"
+    }
+  },
+  "cardProgramId": "string",
+  "cardReferenceID": 0,
+  "cardShippingMethodId": 0,
+  "cardStatusCode": "VALID_CARD",
+  "creationTime": "string",
+  "customerId": "string",
+  "deposit": 0,
+  "existingCardNo": "string",
+  "existingCardReferenceID": "string",
+  "expiryDate": "string",
+  "externalCardProgramId": "string",
+  "nameOnCard": "string",
+  "partialCardNumber": "string",
+  "primaryCardNo": "string",
+  "primaryCardReferenceID": "string",
+  "referenceId": 0,
+  "shippingAddress": {
+    "addressLine1": "string",
+    "addressLine2": "string",
+    "city": "string",
+    "country": "string",
+    "emailAddress": "string",
+    "firstName": "string",
+    "id": "string",
+    "isDefault": true,
+    "lastName": "string",
+    "nickName": "string",
+    "phoneNumber": "string",
+    "state": "string",
+    "zipCode": "string"
+  },
+  "startingNumbers": "string",
+  "thirdPartyType": "I2C",
+  "withdrawAmount": 0
+}
+</code></pre>
+<p>get card details</p>
+<h3 id='http-request-14'>HTTP Request</h3>
+<p><code>GET BaseUrl + /api/v1/cards/&lt;cardId&gt;</code></p>
+<h3 id='query-parameters-12'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>cardId</td>
+<td>card Id</td>
+</tr>
+</tbody></table>
+<h2 id='get-balance-of-a-card'>Get Balance of a Card</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"BaseUrl + /api/v1/cards/{cardId}/balance"</span>
+  -H <span class="s2">"Authorization: bearer jwttoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns </p>
+</blockquote>
+<pre class="highlight plaintext"><code>{
+  "additionalCardInfo": {
+    "date": "string",
+    "sendingMethod": "string",
+    "trackNumber": "string"
+  },
+  "allocatedToTenant": {
+    "id": "string",
+    "name": "string"
+  },
+  "amountLimit": 0,
+  "assignedToCardHolder": true,
+  "balances": [
+    {
+      "balance": 0,
+      "currency": "string"
+    }
+  ],
+  "batchReferenceId": 0,
+  "cardEstimatedUsage": {
+    "yearlyAtmWithdrawal": "string"
+  },
+  "cardHolder": {
+    "address2": "string",
+    "address3": "string",
+    "address4": "string",
+    "address5": "string",
+    "applicationId": "string",
+    "billingAddress1": "string",
+    "billingAddress2": "string",
+    "billingAddress3": "string",
+    "billingAddress4": "string",
+    "billingAddress5": "string",
+    "billingCity": "string",
+    "billingCountry": "string",
+    "billingState": "string",
+    "billingZipOrPostalCode": "string",
+    "cellNumber": "string",
+    "cellPhoneProvider": "string",
+    "citizenCountry": "string",
+    "city": "string",
+    "country": "string",
+    "dob": "string",
+    "drivingLicense": "string",
+    "drivingLicenseNumber": "string",
+    "drivingLicenseState": "string",
+    "email": "string",
+    "employmentStatus": "string",
+    "firstName": "string",
+    "firstName2": "string",
+    "firstName3": "string",
+    "foreignCountryCode": "string",
+    "foreignID": "string",
+    "foreignIDType": "string",
+    "gender": "MALE",
+    "id": "string",
+    "langId": "string",
+    "lastName": "string",
+    "lastName2": "string",
+    "lastName3": "string",
+    "middleName": "string",
+    "middleName2": "string",
+    "middleName3": "string",
+    "motherMaidenName": "string",
+    "nameofEmployer": "string",
+    "occupation": "string",
+    "postalCode": "string",
+    "relation": "string",
+    "residentialPhone": "string",
+    "shipToFirstName": "string",
+    "shipToLastName": "string",
+    "shipToMiddleName": "string",
+    "shippingAddressOptionId": "string",
+    "ssn": "string",
+    "stateCode": "string",
+    "status": "string",
+    "workPhone": "string"
+  },
+  "cardId": "string",
+  "cardNote": "string",
+  "cardNumber": 0,
+  "cardNumberLastDigits": "string",
+  "cardProgram": {
+    "commission": 0,
+    "commissionType": "PROFIT_SHARE",
+    "creationTime": "2019-04-24T06:22:53.647Z",
+    "currency": "string",
+    "deleted": true,
+    "externalCardProgramCurrencies": "string",
+    "externalCardProgramId": "string",
+    "id": "string",
+    "lastUpdatedTime": "2019-04-24T06:22:53.647Z",
+    "name": "string",
+    "tenantId": "string",
+    "tenantName": "string",
+    "termAndCondition": {
+      "description": "string",
+      "id": "string",
+      "name": "string",
+      "url": "string"
+    }
+  },
+  "cardProgramId": "string",
+  "cardReferenceID": 0,
+  "cardShippingMethodId": 0,
+  "cardStatusCode": "VALID_CARD",
+  "creationTime": "string",
+  "customerId": "string",
+  "deposit": 0,
+  "existingCardNo": "string",
+  "existingCardReferenceID": "string",
+  "expiryDate": "string",
+  "externalCardProgramId": "string",
+  "nameOnCard": "string",
+  "partialCardNumber": "string",
+  "primaryCardNo": "string",
+  "primaryCardReferenceID": "string",
+  "referenceId": 0,
+  "shippingAddress": {
+    "addressLine1": "string",
+    "addressLine2": "string",
+    "city": "string",
+    "country": "string",
+    "emailAddress": "string",
+    "firstName": "string",
+    "id": "string",
+    "isDefault": true,
+    "lastName": "string",
+    "nickName": "string",
+    "phoneNumber": "string",
+    "state": "string",
+    "zipCode": "string"
+  },
+  "startingNumbers": "string",
+  "thirdPartyType": "I2C",
+  "withdrawAmount": 0
+}
+</code></pre>
+<p>Get balance of a card account</p>
+<h3 id='http-request-15'>HTTP Request</h3>
+<p><code>GET BaseUrl + /api/v1/cards/&lt;cardId&gt;/balance</code></p>
+<h3 id='query-parameters-13'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>cardId</td>
+<td>true</td>
+<td>card Id</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>true</td>
+<td>currency code as query param</td>
+</tr>
+</tbody></table>
+<h2 id='credit-fund-to-a-card-account'>Credit fund to a card account</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"BaseUrl + /api/v1/cards/{cardId}/credit-fund"</span>
+  -H <span class="s2">"Authorization: bearer jwttoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns </p>
+</blockquote>
+<pre class="highlight plaintext"><code>{
+  "additionalCardInfo": {
+    "date": "string",
+    "sendingMethod": "string",
+    "trackNumber": "string"
+  },
+  "allocatedToTenant": {
+    "id": "string",
+    "name": "string"
+  },
+  "amountLimit": 0,
+  "assignedToCardHolder": true,
+  "balances": [
+    {
+      "balance": 0,
+      "currency": "string"
+    }
+  ],
+  "batchReferenceId": 0,
+  "cardEstimatedUsage": {
+    "yearlyAtmWithdrawal": "string"
+  },
+  "cardHolder": {
+    "address2": "string",
+    "address3": "string",
+    "address4": "string",
+    "address5": "string",
+    "applicationId": "string",
+    "billingAddress1": "string",
+    "billingAddress2": "string",
+    "billingAddress3": "string",
+    "billingAddress4": "string",
+    "billingAddress5": "string",
+    "billingCity": "string",
+    "billingCountry": "string",
+    "billingState": "string",
+    "billingZipOrPostalCode": "string",
+    "cellNumber": "string",
+    "cellPhoneProvider": "string",
+    "citizenCountry": "string",
+    "city": "string",
+    "country": "string",
+    "dob": "string",
+    "drivingLicense": "string",
+    "drivingLicenseNumber": "string",
+    "drivingLicenseState": "string",
+    "email": "string",
+    "employmentStatus": "string",
+    "firstName": "string",
+    "firstName2": "string",
+    "firstName3": "string",
+    "foreignCountryCode": "string",
+    "foreignID": "string",
+    "foreignIDType": "string",
+    "gender": "MALE",
+    "id": "string",
+    "langId": "string",
+    "lastName": "string",
+    "lastName2": "string",
+    "lastName3": "string",
+    "middleName": "string",
+    "middleName2": "string",
+    "middleName3": "string",
+    "motherMaidenName": "string",
+    "nameofEmployer": "string",
+    "occupation": "string",
+    "postalCode": "string",
+    "relation": "string",
+    "residentialPhone": "string",
+    "shipToFirstName": "string",
+    "shipToLastName": "string",
+    "shipToMiddleName": "string",
+    "shippingAddressOptionId": "string",
+    "ssn": "string",
+    "stateCode": "string",
+    "status": "string",
+    "workPhone": "string"
+  },
+  "cardId": "string",
+  "cardNote": "string",
+  "cardNumber": 0,
+  "cardNumberLastDigits": "string",
+  "cardProgram": {
+    "commission": 0,
+    "commissionType": "PROFIT_SHARE",
+    "creationTime": "2019-04-24T06:22:53.707Z",
+    "currency": "string",
+    "deleted": true,
+    "externalCardProgramCurrencies": "string",
+    "externalCardProgramId": "string",
+    "id": "string",
+    "lastUpdatedTime": "2019-04-24T06:22:53.707Z",
+    "name": "string",
+    "tenantId": "string",
+    "tenantName": "string",
+    "termAndCondition": {
+      "description": "string",
+      "id": "string",
+      "name": "string",
+      "url": "string"
+    }
+  },
+  "cardProgramId": "string",
+  "cardReferenceID": 0,
+  "cardShippingMethodId": 0,
+  "cardStatusCode": "VALID_CARD",
+  "creationTime": "string",
+  "customerId": "string",
+  "deposit": 0,
+  "existingCardNo": "string",
+  "existingCardReferenceID": "string",
+  "expiryDate": "string",
+  "externalCardProgramId": "string",
+  "nameOnCard": "string",
+  "partialCardNumber": "string",
+  "primaryCardNo": "string",
+  "primaryCardReferenceID": "string",
+  "referenceId": 0,
+  "shippingAddress": {
+    "addressLine1": "string",
+    "addressLine2": "string",
+    "city": "string",
+    "country": "string",
+    "emailAddress": "string",
+    "firstName": "string",
+    "id": "string",
+    "isDefault": true,
+    "lastName": "string",
+    "nickName": "string",
+    "phoneNumber": "string",
+    "state": "string",
+    "zipCode": "string"
+  },
+  "startingNumbers": "string",
+  "thirdPartyType": "I2C",
+  "withdrawAmount": 0
+}
+</code></pre>
+<p>Credit fund to a card account</p>
+<h3 id='http-request-16'>HTTP Request</h3>
+<p><code>POST BaseUrl + /api/v1/cards/&lt;cardId&gt;/credit-fund</code></p>
+<h3 id='post-parameters-3'>Post Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>cardId</td>
+<td>card Id</td>
+</tr>
+<tr>
+<td>cardCreditRequest</td>
+<td>JSON body like below</td>
+</tr>
+</tbody></table>
+
+<p><code>JSON
+{
+  &quot;amount&quot;: 0,
+  &quot;currency&quot;: &quot;string&quot;,
+  &quot;grossAmount&quot;: 0,
+  &quot;verificationCode&quot;: &quot;string&quot;
+}
+</code></p>
+<h2 id='get-card-latest-transaction-history'>Get card latest transaction history</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"BaseUrl + /api/v1/cards/{cardId}/latest-transaction-history"</span>
+  -H <span class="s2">"Authorization: bearer jwttoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns </p>
+</blockquote>
+<pre class="highlight plaintext"><code>[
+  {
+    "amount": 0,
+    "authorizationIdResp": "string",
+    "cardAcceptorNameLoc": "string",
+    "currency": "string",
+    "dateTime": "string",
+    "record": 0,
+    "terminalId": "string",
+    "transTypeIndicator": "string",
+    "transactionType": "string"
+  }
+]
+</code></pre>
+<p>Get latest transaction history of a card account</p>
+<h3 id='http-request-17'>HTTP Request</h3>
+<p><code>GET BaseUrl + /api/v1/cards/&lt;cardId&gt;/latest-transaction-history</code></p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>cardId</td>
+<td>card Id</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>query param</td>
+</tr>
+</tbody></table>
+<h2 id='change-card-status-v2'>Change card status V2</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"BaseUrl + /api/v1/cards/{cardId}/status-v2"</span>
+  -H <span class="s2">"Authorization: bearer jwttoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns 200 OK</p>
+</blockquote>
+<pre class="highlight plaintext"><code></code></pre>
+<p>change Card Status V2</p>
+<h3 id='http-request-18'>HTTP Request</h3>
+<p><code>PUT BaseUrl + /api/v1/cards/&lt;cardId&gt;/status-v2</code></p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>cardId</td>
+<td>card Id</td>
+</tr>
+<tr>
+<td>statusCode</td>
+<td>query param</td>
+</tr>
+</tbody></table>
+
+<p>/api/v1/cards/{oldCardId}/card-replacement/{newCardId}</p>
+<h2 id='change-card-status-v2-2'>Change card status V2</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"BaseUrl + /api/v1/cards/{oldCardId}/card-replacement/{newCardId}"</span>
+  -H <span class="s2">"Authorization: bearer jwttoken"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns 200 OK</p>
+</blockquote>
+<pre class="highlight plaintext"><code></code></pre>
+<p>change Card Status V2</p>
+<h3 id='http-request-19'>HTTP Request</h3>
+<p><code>PUT BaseUrl + /api/v1/cards/&lt;oldCardId&gt;/card-replacement/&lt;newCardId&gt;</code></p>
+<h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>cardId</td>
+<td>card Id</td>
+</tr>
+<tr>
+<td>statusCode</td>
+<td>query param</td>
+</tr>
+</tbody></table>
+
+<p>/api/v1/cards/verify-credit-fund</p>
+<h1 id='errors'>Errors</h1>
+<aside class="notice">
+This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+</aside>
+
+<p>The Ewm API uses the following error codes:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request -- Your request is invalid.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- Your API key is wrong.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden -- The ewm requested is hidden for administrators only.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- The specified ewm could not be found.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed -- You tried to access a ewm with an invalid method.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone -- The ewm requested has been removed from our servers.</td>
+</tr>
+<tr>
+<td>418</td>
+<td>I&#39;m a teapot.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests -- You&#39;re requesting too many ewms! Slow down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
